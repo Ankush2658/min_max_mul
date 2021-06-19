@@ -1,0 +1,41 @@
+<!-- 
+<html>
+<label for="min">Min</label>
+<input type="number" id="min" name="min">
+<br>
+<label for="max">Max</label>
+<input type="number" id="max" name="max">
+<br>
+<label for="mul">Mul</label>
+<input type="number" id="mul" name="mul">
+<br>
+<button onclick="validate()">Validate</button>
+</html>
+
+<style>
+input.invalid {
+    border: 2px solid red;
+  }
+</style>
+
+
+<script type="text/javascript">
+const min = document.getElementById('min')
+const max = document.getElementById('max')
+const mul = document.getElementById('mul')
+
+const validate = () => {
+  const minValue = Number(min.value)
+  const maxValue = Number(max.value)
+  const mulValue = Number(mul.value)
+
+  if (minValue < maxValue &&
+    maxValue % minValue === 0) min.classList.remove('invalid')
+  else min.classList.add('invalid')
+
+  if (mulValue < maxValue &&
+    mulValue <= minValue &&
+    maxValue % minValue === 0) mul.classList.remove('invalid')
+  else mul.classList.add('invaid')
+}
+ -->
